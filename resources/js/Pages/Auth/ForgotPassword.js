@@ -6,13 +6,14 @@ import Logo from '@/Shared/Logo';
 import LoadingButton from '@/Shared/LoadingButton';
 import TextInput from '@/Shared/TextInput';
 
+
 export default () => {
   const { data, setData, errors, post, processing } = useForm({
   });
 
   function handleSubmit(e) {
     e.preventDefault();
-    post(route('login.attempt'));
+    post(route('sendMessage', data.email));
   }
 
   return (
