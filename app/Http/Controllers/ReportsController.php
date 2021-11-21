@@ -11,7 +11,6 @@ class ReportsController extends Controller
 {
     public function index()
     {
-        //dd(Report::all());
         return Inertia::render('Reports/Index', [
             "reports" => Report::all()
         ]);
